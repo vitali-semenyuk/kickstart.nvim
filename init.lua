@@ -199,6 +199,19 @@ vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right win
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
+vim.keymap.set('n', '<leader>wv', '<C-w>v', { desc = '[W]indow split [v]ertically' })
+vim.keymap.set('n', '<leader>wh', '<C-w>s', { desc = '[W]indow split [h]orizontally' })
+vim.keymap.set('n', '<leader>we', '<C-w>=', { desc = '[W]indow splits [e]qual size' })
+vim.keymap.set('n', '<leader>wx', '<cmd>close<CR>', { desc = '[W]indow close/e[x]it' })
+
+vim.keymap.set('n', '<leader>\\', '<C-w>v', { desc = 'Window split vertically (\\)' })
+vim.keymap.set('n', '<leader>-', '<C-w>s', { desc = 'Window split horizontally (-)' })
+
+vim.keymap.set('n', '<leader>bc', '<cmd>BufferLinePickClose<CR>', { desc = '[b]uffer pi[c]k to close' })
+vim.keymap.set('n', '<leader>bp', '<cmd>BufferLinePick<CR>', { desc = '[b]uffer [p]ick to switch' })
+vim.keymap.set('n', '<leader>bl', '<cmd>BufferLineCloseLeft<CR>', { desc = '[b]uffer close all to [l]eft' })
+vim.keymap.set('n', '<leader>br', '<cmd>BufferLineCloseRight<CR>', { desc = '[b]uffer close all to [r]ight' })
+
 -- NOTE: Some terminals have colliding keymaps or are not able to send distinct keycodes
 -- vim.keymap.set("n", "<C-S-h>", "<C-w>H", { desc = "Move window to the left" })
 -- vim.keymap.set("n", "<C-S-l>", "<C-w>L", { desc = "Move window to the right" })
@@ -336,8 +349,8 @@ require('lazy').setup({
 
       -- Document existing key chains
       spec = {
-        { '<leader>b', group = '[B]uffers' },
-        { '<leader>w', group = '[W]indows' },
+        { '<leader>b', group = '[B]uffer' },
+        { '<leader>w', group = '[W]indow' },
         { '<leader>s', group = '[S]earch' },
         { '<leader>g', group = '[G]it', mode = { 'n', 'v' } },
         { '<leader>t', group = '[T]oggle' },
