@@ -6,6 +6,7 @@ return {
     'antoinemadec/FixCursorHold.nvim',
     'nvim-treesitter/nvim-treesitter',
     'olimorris/neotest-rspec',
+    'mrcjkb/rustaceanvim',
   },
   config = function()
     local neotest = require 'neotest'
@@ -37,6 +38,7 @@ return {
     neotest.setup {
       adapters = {
         require 'neotest-rspec',
+        require 'rustaceanvim.neotest',
       },
     }
   end,
