@@ -618,7 +618,14 @@ require('lazy').setup({
         --
         -- But for many setups, the LSP (`ts_ls`) will work just fine
         ts_ls = {},
-        ruby_lsp = {},
+        cssls = {},
+        ruby_lsp = {
+          init_options = {
+            indexing = {
+              excludedPatterns = { '**/vendor/**/*' },
+            },
+          },
+        },
 
         stylua = {}, -- Used to format Lua code
 
