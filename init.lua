@@ -627,6 +627,7 @@ require('lazy').setup({
           },
         },
         gopls = {},
+        zls = {},
 
         stylua = {}, -- Used to format Lua code
 
